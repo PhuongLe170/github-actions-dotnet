@@ -53,5 +53,5 @@ jobs:
       - name: 'Deploy on Azure App Service'
         uses: azure/webapps-deploy@v2
         with:
-          app-name: app-dometrain-github-actions-phuongle-dev
+          app-name: app-dometrain-github-actions-phuong-dev
           package: artifacts/
