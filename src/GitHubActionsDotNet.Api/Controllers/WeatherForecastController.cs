@@ -8,7 +8,7 @@ public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries =
     [
-      "Windy"
+      "Cool"
     ];
 
     [HttpGet(Name = "GetWeatherForecast")]
