@@ -35,15 +35,20 @@ jobs:
   deploy_dev:
     name: Deploy Dev
     needs: build
-    uses: phuongle170/github-actions-reuseable/.github/workflows/step-deploy.yml@main
+    uses: ./.github/workflows/step-deploy.yml
     with:
       env: dev
+      resource_group_name: rg-dometrain-dev
+      app_service_name: app-dometrain-github-actions-phuong-dev
+
     secrets: inherit
 
   deploy_prod:
     name: Deploy Dev
     needs: deploy_dev
-    uses: phuongle170/github-actions-reuseable/.github/workflows/step-deploy.yml@main
+    uses: ./.github/workflows/step-deploy.yml
     with:
       env: prod
+      resource_group_name: rg-dometrain-dev
+      app_service_name: app-dometrain-github-actions-phuong-prod
     secrets: inherit
