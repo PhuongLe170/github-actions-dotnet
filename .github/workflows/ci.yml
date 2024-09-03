@@ -35,7 +35,7 @@ jobs:
   deploy_dev:
     name: Deploy Dev
     needs: build
-    uses: ./.github/workflows/step-deploy.yml
+    uses: phuongle170/github-actions-reuseable/.github/workflows/step-deploy.yml
     with:
       env: dev
     secrets: inherit
@@ -43,7 +43,7 @@ jobs:
   deploy_prod:
     name: Deploy Dev
     needs: deploy_dev
-    uses: ./.github/workflows/step-deploy.yml
+    uses: phuongle170/github-actions-reuseable/.github/workflows/step-deploy.yml
     with:
       env: prod
     secrets: inherit
